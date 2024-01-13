@@ -1,0 +1,154 @@
+/* profile.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ecf0f1; /* Clouds */
+}
+
+header {
+    background-color: #2c3e50; /* Midnight Blue */
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #34495e; /* Wet Asphalt */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2ecc71; /* Emerald Green */
+}
+
+.profile-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-info h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.user-info p {
+    color: #666;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.profile-link {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e74c3c; /* Alizarin Crimson */
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-link:hover {
+    background-color: #c0392b; /* Pomegranate */
+}
+
+/* Content Section Styling */
+.content-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ecf0f1; /* Clouds */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.content-section h3 {
+    color: #3498db; /* Royal Blue */
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    color: #555; /* Dark Gray */
+}
+
+/* Contact Us Section Styling */
+.contact-us-section {
+    margin-top: 40px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us-section h3 {
+    color: #3498db; /* Royal Blue */
+    margin-bottom: 10px;
+}
+
+.contact-us-section p {
+    color: #555; /* Dark Gray */
+}
+
+.contact-us-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-us-section li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

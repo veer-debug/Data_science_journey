@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Entity Recognition</title>
+    <link rel="stylesheet" href="../static/ner.css">
+</head>
+<body>
+
+<header>
+    <h1>Named Entity Recognition</h1>
+    <nav>
+        <ul>
+            <li><a href="#ner-form">NER Form</a></li>
+            <li><a href="#about">About NER</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#example">Example</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="ner-form">
+    <div class="container">
+        <h2 >NER Analise</h2>
+        <form id="nerForm" action='/perform_ner',method="post">
+            <label for="textInput">Enter Text for NER:</label>
+            <textarea name="ner_text" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="outputSpace">
+        {%if response%}
+            {%for i in response['entities']:%}
+                <p>{{i['name'] ,"==>", i['category'] }}</p>
+            {% endfor %}
+        {%endif%}
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Named Entity Recognition</h2>
+        <p>
+            Named Entity Recognition (NER) is a natural language processing (NLP) technique that focuses on identifying
+            and classifying named entities in text. These entities can include names of people, organizations, locations,
+            dates, and more.
+        </p>
+    </div>
+</section>
+
+<section id="how-it-works">
+    <div class="container">
+        <h2>How It Works</h2>
+        <p>
+            NER works by analyzing the structure and context of the text to identify and categorize entities. It involves
+            breaking down the text into tokens and then determining the type of each token (e.g., person, location, date).
+        </p>
+    </div>
+</section>
+
+<section id="example">
+    <div class="container">
+        <h2>Example</h2>
+        <p>
+            Consider the following sentence: "Apple Inc. was founded by Steve Jobs in Cupertino on April 1, 1976."
+            Using NER, the system can identify "Apple Inc." as an organization, "Steve Jobs" as a person, "Cupertino" as
+            a location, and "April 1, 1976" as a date.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries related to Named Entity Recognition, feel free to reach out to us!</p>
+        <p>Email: ner@webpage.com</p>
+        <p>Phone: +1 123-456-7890</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 NER Web Page. All rights reserved.</p>
+</footer>
+
+<script src="ner.js"></script>
+</body>
+</html>
