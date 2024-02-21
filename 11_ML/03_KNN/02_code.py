@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
-from KNeighborsClassifier import Knn
+from knn_Cod import Knn
 
 df = pd.read_csv('Social_Network_Ads.csv')
 
