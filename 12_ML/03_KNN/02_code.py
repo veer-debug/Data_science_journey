@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from knn_Cod import Knn
 
-df = pd.read_csv('Social_Network_Ads.csv')
+df = pd.read_csv('../Datas/Social_Network_Ads.csv')
 
 df = df.iloc[:,1:]
 encoder = LabelEncoder()
@@ -15,10 +15,10 @@ df['Gender'] = encoder.fit_transform(df['Gender'])
 scaler = StandardScaler()
 
 X = df.iloc[:,0:3].values
-X = scaler.fit_transform(X)
+x = scaler.fit_transform(X)
 y = df.iloc[:,-1].values
 
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=10)
+X_train,X_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=10)
 
 knn = KNeighborsClassifier(n_neighbors=5)
 
